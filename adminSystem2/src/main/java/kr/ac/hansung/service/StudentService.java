@@ -16,7 +16,7 @@ public class StudentService {
 	private StudentDao studentDao;
 	
 	public List<Student> getStudents(){
-		return studentDao.getProducts();
+		return studentDao.getStudents();
 	}
 
 }

@@ -23,7 +23,7 @@ public class StudentDao {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-	public List<Student> getProducts(){
+	public List<Student> getStudents(){
 		String sqlStatement = "select * from student";
 		return jdbcTemplate.query(sqlStatement, new RowMapper<Student>(){
 

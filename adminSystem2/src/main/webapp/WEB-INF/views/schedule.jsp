@@ -75,30 +75,40 @@
 		</nav>
 	</header>
 
+
+
 	<div class="container-wrapper">
 		<div class="container">
-			<h2>학생들 관리 페이지</h2>
-			<p>학생들의 정보를 확인하는곳입니다.</p>
+			<h2>각호실의 수업 정보</h2>
+			<p>수업 정보를 확인하는곳입니다.</p>
 			<table class="table table-striped">
 				<thead>
 					<tr class="bg-success">
 						<th>Num</th>
-						<th>Id</th>
-						<th>PassWord</th>
 						<th>Name</th>
-						<th>Check</th>
+						<th>Day</th>
+						<th>Time</th>
 						<th></th>
 
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="student" items="${Students}">
+					<c:forEach var="schedule" items="${Schedule}">
 						<tr>
-							<td>${student.num}</td>
-							<td>${student.id}</td>
-							<td>${student.password}</td>
-							<td>${student.name}</td>
-							<td>${student.check}</td>
+							<td>${schedule.num}</td>
+							<td>${schedule.name}</td>
+							<td>
+							<c:set var="day" value="${schedule.day}" /> 
+							<c:choose>
+									<c:when test="${day==1}">일요일</c:when>
+									<c:when test="${day==2}">월요일</c:when>
+									<c:when test="${day==3}">화요일</c:when>
+									<c:when test="${day==4}">수요일</c:when>
+									<c:when test="${day==5}">목요일</c:when>
+									<c:when test="${day==6}">금요일</c:when>
+									<c:when test="${day==7}">토요일</c:when>
+								</c:choose></td>
+							<td>${schedule.time}교시</td>
 							<td></td>
 						</tr>
 					</c:forEach>
