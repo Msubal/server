@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="base" template="/WEB-INF/templates/layout.jsp">
+		<put-attribute name="title" value="eStore homepage" />
+		<put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+	</definition>
+	
+	<definition name="home" extends="base">
+		<put-attribute name="title" value="FinalProject homepage" />
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	
+	<definition name="admin" extends="base">
+		<put-attribute name="title" value="Administrator_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/admin.jsp" />
+	</definition>
+	
+	<definition name="buildings" extends="base">
+		<put-attribute name="title" value="Administ buildings" />
+		<put-attribute name="body" value="/WEB-INF/views/buildings.jsp" />
+	</definition>
+	
+	<definition name="addBuilding" extends="base">
+		<put-attribute name="title" value="AddBuilding_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/addBuilding.jsp" />
+	</definition>
+	
+	<definition name="updateBuilding" extends="base">
+		<put-attribute name="title" value="UpdateBuilding_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/updateBuilding.jsp" />
+	</definition>
+	
+	<definition name="schedules" extends="base">
+		<put-attribute name="title" value="Schedule_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/schedules.jsp" />
+	</definition>
+
+	<definition name="addSchedule" extends="base">
+		<put-attribute name="title" value="AddSchedule_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/addSchedule.jsp" />
+	</definition>
+		
+	<definition name="updateSchedule" extends="base">
+		<put-attribute name="title" value="UpdateSchedule_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/updateSchedule.jsp" />
+	</definition>
+	
+	<definition name="students" extends="base">
+		<put-attribute name="title" value="Students_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/students.jsp" />
+	</definition>
+	
+	<definition name="addStudent" extends="base">
+		<put-attribute name="title" value="AddStudent_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/addStudent.jsp" />
+	</definition>
+	
+	<definition name="updateStudent" extends="base">
+		<put-attribute name="title" value="UpDateStudent_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/updateStudent.jsp" />
+	</definition>
+	
+	<definition name="error" extends="base">
+		<put-attribute name="title" value="Error_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/error.jsp" />
+	</definition>
+	
+</tiles-definitions>
