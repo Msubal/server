@@ -17,6 +17,14 @@
 		<jackson.version>2.7.5</jackson.version>
 	</properties>
 	<dependencies>
+
+		<!-- maven-resources-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>

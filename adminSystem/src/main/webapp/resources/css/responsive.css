@@ -1,8 +1,4 @@
 @media(min-width:1200px) and (max-width:1400px) {
-.history .history-detail{
-	padding-left: 50px;
-	padding-right: 50px;
-}	
 header:before{
     width: 40.3%;	
 }
@@ -43,9 +39,6 @@ header:before{
 }
 .about .hrs h3 i{
 	float: none;
-}
-.history .history-detail{
-	padding: 30px;
 }
 footer .foot-logo{
 	width: 100%;

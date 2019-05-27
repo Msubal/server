@@ -30,7 +30,11 @@ public class BuildingService {
 		return buildingDao.updateBuilding(building);
 	}
 	
-	public Building getBuildingById(int id) {
-		return buildingDao.getBuildingById(id);
+	public Building getBuildingById(int num) {
+		return buildingDao.getBuildingById(num);
+	}
+	
+	public Building getBuildingByIdNumber(String name,int number) {
+		return buildingDao.getBuildingByIdNumber(name,number);
 	}
 }

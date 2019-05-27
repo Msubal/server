@@ -25,20 +25,20 @@
           <li><a href="<c:url value="/"/>">PAGES</a>
             <ul class="dropdown">
               <li><a href="<c:url value="/"/>">HOME</a></li>
-              <li><a href="history.html"> history </a></li>
-              <li><a href="gallery.html"> Gallery </a></li>
-              <li><a href="event.html"> EVENTs </a></li>
+              <li><a href="<c:url value="/admin/students"/>"> Student </a></li>
+              <li><a href="<c:url value="/admin/buildings"/>"> Building </a></li>
+              <li><a href="<c:url value="/admin/buildings/schedules"/>"> Schedule </a></li>
               <li><a href="single-event.html">single EVENT </a></li>
               <li><a href="sponsors.html"> sponsors </a></li>
               <li><a href="contact.html"> Contact</a></li>
               <li><a href="<c:url value="error"/>"> 404 Page</a></li>
             </ul>
           </li>
-          <li><a href="history.html"> history </a></li>
-          <li><a href="gallery.html"> Gallery </a></li>
-          <li><a href="event.html"> EVENTs </a></li>
-          <li><a href="sponsors.html"> sponsors </a></li>
-          <li><a href="contact.html"> Contact</a></li>
+          <li><a href="<c:url value="/"/>"> history </a></li>
+          <li><a href="<c:url value="/"/>"> Gallery </a></li>
+          <li><a href="<c:url value="/"/>"> EVENTs </a></li>
+          <li><a href="<c:url value="/"/>"> sponsors </a></li>
+          <li><a href="<c:url value="/"/>"> Contact</a></li>
         </ul>
       </nav>
     </div>

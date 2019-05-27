@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 
 <!--======= HOME MAIN SLIDER =========-->
-  <section class="sub-bnr sub-contact" data-stellar-background-ratio="0.3">
+  <section class="sub-bnr sub-schedule" data-stellar-background-ratio="0.3">
     <div class="overlay-gr">
       <div class="container">
         <h2>contact us</h2>

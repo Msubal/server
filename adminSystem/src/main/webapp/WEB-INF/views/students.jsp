@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<section class="sub-bnr sub-404" data-stellar-background-ratio="0.3">
+<section class="sub-bnr sub-schedule" data-stellar-background-ratio="0.3">
     <div class="overlay-gr">
       <div class="container">
         <h2>Student_Inventory</h2>
@@ -36,13 +36,15 @@
 				<c:forEach var="student" items="${students}">
 					<tr>
 						<td>${student.name}</td>
-						<td>${student.studentId}</td>
+						<td>${student.id}</td>
 						<td>${student.password}</td>
 						<td>
 							<a  href="<c:url value="/admin/students/updateStudent/${student.num}" />"> 
-							<i class="fa fa-edit" style="color:#0000ff;"></i></a>
+								<i class="fa fa-edit" style="color:#0000ff;"></i>
+							</a>
 							<a  href="<c:url value="/admin/students/deleteStudent/${student.num}" />"> 
-							<i class="fa fa-user-times" style="color:#0000ff;"></i></a>
+								<i class="fa fa-user-times" style="color:#0000ff;"></i>
+							</a>
 						</td>
 				</c:forEach>
 			</tbody>

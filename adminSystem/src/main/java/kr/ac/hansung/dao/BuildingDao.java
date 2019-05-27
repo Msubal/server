@@ -71,10 +71,29 @@ public class BuildingDao {
 
 	public Building getBuildingById(int num) {
 
-
 		String sqlStatement = "select * from `building` where `num` = ?"; // id value search
 
 		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { num }, new RowMapper<Building>() {
+
+			@Override
+			public Building mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+				Building building = new Building();
+				
+				building.setNum(rs.getInt("num"));
+				building.setName(rs.getString("name"));
+				building.setNumber(rs.getInt("number"));
+
+				return building;
+			}
+		});
+	}
+
+	public Building getBuildingByIdNumber(String name, int number) {
+		
+		String sqlStatement = "select * from `building` where `name` = ? and `number` = ?"; // id value search
+
+		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { name, number }, new RowMapper<Building>() {
 
 			@Override
 			public Building mapRow(ResultSet rs, int rowNum) throws SQLException {

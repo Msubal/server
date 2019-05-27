@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kr.ac.hansung.dao.ScheduleDao;
 import kr.ac.hansung.model.Schedule;
+import kr.ac.hansung.model.Student;
 
 @Service
 public class ScheduleService {
@@ -22,9 +23,9 @@ public class ScheduleService {
 		return scheduleDao.addSchedule(schedule);
 	}
 
-	public boolean deleteSchedule(int id) {
+	public boolean deleteSchedule(int num) {
 		
-		return scheduleDao.deleteSchedule(id);
+		return scheduleDao.deleteSchedule(num);
 	}
 	
 	public boolean updateSchedule(Schedule schedule) {

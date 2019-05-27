@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 
 <!--======= HOME MAIN SLIDER =========-->
-  <section class="sub-bnr sub-contact" data-stellar-background-ratio="0.3">
+  <section class="sub-bnr sub-schedule" data-stellar-background-ratio="0.3">
     <div class="overlay-gr">
       <div class="container">
         <h2>contact us</h2>
@@ -30,7 +30,7 @@
               <!--======= Success Msg =========-->
               <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
               <!--======= FORM  =========-->
-	              <sf:form action="${pageContext.request.contextPath}/admin/buildings/schedules/updateSchedule/${schedule.number}"
+	              <sf:form action="${pageContext.request.contextPath}/admin/buildings/schedules/updateSchedule/${schedule.num}"
 						method="post" modelAttribute="schedule">
 						
 						<sf:hidden path="num" id="num" />
@@ -57,7 +57,7 @@
 						</div>
 						<br />
 						<input type="submit" value="submit" class="btn btn-primary">
-						<a href="<c:url value="/admin/buildings/schedules/${schedule.number}" />"
+						<a href="<c:url value="/admin/buildings/schedules/${schedule.num}" />"
 							class="btn btn-primary">Cancel</a>
 					</sf:form>
             </div>

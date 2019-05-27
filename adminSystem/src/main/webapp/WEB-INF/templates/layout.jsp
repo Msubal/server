@@ -47,41 +47,41 @@
 	</div>
 
 	<script src="<c:url value="/resources/js/jquery-1.11.0.min.js"/>"></script> 
-<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script> 
-<script src="<c:url value="/resources/js/own-menu.js"/>"></script> 
-<script src="<c:url value="/resources/js/owl.carousel.min.js"/>"></script> 
-<script src="<c:url value="/resources/js/jquery.stellar.min.js"/>"></script> 
-<script src="<c:url value="/resources/js/smooth-scroll.js"/>"></script> 
-<script src="<c:url value="/resources/js/jquery.prettyPhoto.js"/>"></script> 
+	<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script> 
+	<script src="<c:url value="/resources/js/own-menu.js"/>"></script> 
+	<script src="<c:url value="/resources/js/owl.carousel.min.js"/>"></script> 
+	<script src="<c:url value="/resources/js/jquery.stellar.min.js"/>"></script> 
+	<script src="<c:url value="/resources/js/smooth-scroll.js"/>"></script> 
+	<script src="<c:url value="/resources/js/jquery.prettyPhoto.js"/>"></script> 
 
-<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
-<script type="text/javascript" src="<c:url value="/resources/rs-plugin/js/jquery.themepunch.tools.min.js"/>"></script> 
-<script type="text/javascript" src="<c:url value="/resources/rs-plugin/js/jquery.themepunch.revolution.min.js"/>"></script> 
-<script src="<c:url value="/resources/js/main.js"/>"></script>
-<script type="text/javascript">
-/*-----------------------------------------------------------------------------------*/
-/*  SLIDER REVOLUTION
-/*-----------------------------------------------------------------------------------*/
-jQuery('.tp-banner').show().revolution({
-  dottedOverlay:"none",
-  delay:10000,
-  startwidth:1170,
-  startheight:630,
-  navigationType:"bullet",
-  navigationArrows:"solo",
-  navigationStyle:"preview4",
-  parallax:"mouse",
-  parallaxBgFreeze:"on",
-  parallaxLevels:[7,4,3,2,5,4,3,2,1,0],                       
-  keyboardNavigation:"on",            
-  shadow:0,
-  fullWidth:"on",
-  fullScreen:"off",
-  shuffle:"off",            
-  autoHeight:"off",           
-  forceFullWidth:"off", 
-  fullScreenOffsetContainer:""  
-});
-</script>
+	<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+	<script type="text/javascript" src="<c:url value="/resources/rs-plugin/js/jquery.themepunch.tools.min.js"/>"></script> 
+	<script type="text/javascript" src="<c:url value="/resources/rs-plugin/js/jquery.themepunch.revolution.min.js"/>"></script> 
+	<script src="<c:url value="/resources/js/main.js"/>"></script>
+	<script type="text/javascript">
+		/*-----------------------------------------------------------------------------------*/
+		/*  SLIDER REVOLUTION
+		/*-----------------------------------------------------------------------------------*/
+		jQuery('.tp-banner').show().revolution({
+		  dottedOverlay:"none",
+		  delay:10000,
+		  startwidth:1170,
+		  startheight:630,
+		  navigationType:"bullet",
+		  navigationArrows:"solo",
+		  navigationStyle:"preview4",
+		  parallax:"mouse",
+		  parallaxBgFreeze:"on",
+		  parallaxLevels:[7,4,3,2,5,4,3,2,1,0],                       
+		  keyboardNavigation:"on",            
+		  shadow:0,
+		  fullWidth:"on",
+		  fullScreen:"off",
+		  shuffle:"off",            
+		  autoHeight:"off",           
+		  forceFullWidth:"off", 
+		  fullScreenOffsetContainer:""  
+		});
+	</script>
 </body>
 </html>

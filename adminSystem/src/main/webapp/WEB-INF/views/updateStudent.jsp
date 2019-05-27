@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 
 <!--======= HOME MAIN SLIDER =========-->
-  <section class="sub-bnr sub-contact" data-stellar-background-ratio="0.3">
+  <section class="sub-bnr sub-schedule" data-stellar-background-ratio="0.3">
     <div class="overlay-gr">
       <div class="container">
         <h2>contact us</h2>
@@ -41,9 +41,9 @@
 							<sf:errors path="name" cssStyle="color:#ff0000;" />
 						</div>
 						<div class="from-group">
-							<label for="studentId">StudentId </label>
-							<sf:input path="studentId" id="studentId" class="form-control" />
-							<sf:errors path="studentId" cssStyle="color:#ff0000;" />
+							<label for="id">ID </label>
+							<sf:input path="id" id="id" class="form-control" />
+							<sf:errors path="id" cssStyle="color:#ff0000;" />
 						</div>
 						<div class="from-group">
 							<label for="password">Password</label>

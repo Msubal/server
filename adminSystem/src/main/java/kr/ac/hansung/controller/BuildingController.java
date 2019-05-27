@@ -17,12 +17,13 @@ import kr.ac.hansung.model.Building;
 import kr.ac.hansung.service.BuildingService;
 
 @Controller
+@RequestMapping(value="/admin/buildings")
 public class BuildingController {
 
 	@Autowired
 	private BuildingService buildingService;
 	
-	@RequestMapping("/admin/buildings")
+	@RequestMapping(value="")
 	public String getBuildings(Model model) {
 		
 		List<Building> buildings = buildingService.getBuildings();
@@ -31,7 +32,7 @@ public class BuildingController {
 		return "buildings";
 	}
 	
-	@RequestMapping(value="/admin/buildings/addBuilding",method=RequestMethod.GET)
+	@RequestMapping(value="/addBuilding",method=RequestMethod.GET)
 	public String addBuilding(Model model) {
 		
 		Building building = new Building();		
@@ -41,7 +42,7 @@ public class BuildingController {
 		return "addBuilding";
 	}
 	
-	@RequestMapping(value="/admin/buildings/addBuilding",method=RequestMethod.POST)
+	@RequestMapping(value="/addBuilding",method=RequestMethod.POST)
 	public String addBuildingPost(@Valid Building building, BindingResult result) {
 		
 		if(result.hasErrors()) {
@@ -60,7 +61,7 @@ public class BuildingController {
 		return "redirect:/admin/buildings";
 	}
 	
-	@RequestMapping(value="/admin/buildings/deleteBuilding/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/deleteBuilding/{num}",method=RequestMethod.GET)
 	public String deleteBuilding(@PathVariable int num) {
 		
 		if( !buildingService.deleteBuilding(num)) {
@@ -70,7 +71,7 @@ public class BuildingController {
 		return "redirect:/admin/buildings";
 	}
 	
-	@RequestMapping(value="/admin/buildings/updateBuilding/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/updateBuilding/{num}",method=RequestMethod.GET)
 	public String updateBuilding(@PathVariable int num, Model model) {
 		
 		Building building = buildingService.getBuildingById(num);
@@ -78,7 +79,7 @@ public class BuildingController {
 		return "updateBuilding";
 	}
 	
-	@RequestMapping(value="/admin/buildings/updateBuilding",method=RequestMethod.POST)
+	@RequestMapping(value="/updateBuilding",method=RequestMethod.POST)
 	public String updateBuildingPost(@Valid Building building, BindingResult result) {
 		
 		if(result.hasErrors()) {

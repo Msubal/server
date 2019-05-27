@@ -17,7 +17,7 @@ import kr.ac.hansung.model.Student;
 import kr.ac.hansung.service.StudentService;
 
 @Controller
-//@RequestMapping("/admin")
+@RequestMapping("/admin/students")
 public class StudentController {
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class StudentController {
 //		return "admin";
 //	}
 	
-	@RequestMapping("/admin/students")
+	@RequestMapping(value ="")
 	public String getStudents(Model model) {
 		
 		List<Student> students = studentService.getStudents();
@@ -37,7 +37,7 @@ public class StudentController {
 		return "students";
 	}
 	
-	@RequestMapping(value="/admin/students/addStudent",method=RequestMethod.GET)
+	@RequestMapping(value="/addStudent",method=RequestMethod.GET)
 	public String addStudent(Model model) {
 		
 		Student student = new Student();		
@@ -47,7 +47,7 @@ public class StudentController {
 		return "addStudent";
 	}
 	
-	@RequestMapping(value="/admin/students/addStudent",method=RequestMethod.POST)
+	@RequestMapping(value="/addStudent",method=RequestMethod.POST)
 	public String addStudentPost(@Valid Student student, BindingResult result) {
 		
 		if(result.hasErrors()) {
@@ -66,7 +66,7 @@ public class StudentController {
 		return "redirect:/admin/students";
 	}
 	
-	@RequestMapping(value="/admin/students/deleteStudent/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/deleteStudent/{num}",method=RequestMethod.GET)
 	public String deleteStudent(@PathVariable int num) {
 		
 		if( !studentService.deleteStudent(num)) {
@@ -76,7 +76,7 @@ public class StudentController {
 		return "redirect:/admin/students";
 	}
 	
-	@RequestMapping(value="/admin/students/updateStudent/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/updateStudent/{num}",method=RequestMethod.GET)
 	public String updateStudent(@PathVariable int num, Model model) {
 		
 		Student student = studentService.getStudentById(num);
@@ -84,7 +84,7 @@ public class StudentController {
 		return "updateStudent";
 	}
 	
-	@RequestMapping(value="/admin/students/updateStudent",method=RequestMethod.POST)
+	@RequestMapping(value="/updateStudent",method=RequestMethod.POST)
 	public String updateStudentPost(@Valid Student student, BindingResult result) {
 		
 		if(result.hasErrors()) {

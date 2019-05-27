@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 
 <!--======= HOME MAIN SLIDER =========-->
-  <section class="sub-bnr sub-contact" data-stellar-background-ratio="0.3">
+  <section class="sub-bnr sub-schedule" data-stellar-background-ratio="0.3">
     <div class="overlay-gr">
       <div class="container">
         <h2>contact us</h2>
@@ -30,23 +30,32 @@
               <!--======= Success Msg =========-->
               <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
 	              <!--======= FORM  =========-->
-	              <sf:form action="${pageContext.request.contextPath}/admin/buildings/schedules/addSchedule/${number}"
+	              <sf:form action="${pageContext.request.contextPath}/admin/buildings/schedules/addSchedule/${num}"
 	              	method="post" modelAttribute="schedule">
+	              	
+	           <%--    	<sf:form modelAttribute="building">
+	              	<sf:label path="name" id = "name" />
+	              	<sf:label path="number" id = "number" />
+	              	</sf:form> --%>
 	              	
 	                  <div class="from-group">
 	                    <label for="name">Name: </label>
 	                      <sf:input path="name" id="name" class="form-control" />
-	                      <sf:errors path="name" cssStyle="color:#ff0000;"></sf:errors>
 	                  </div>
 	                  <div class="from-group">
 	                    <label for="number">Number</label>
 	                      <sf:input path="number" id="number" class="form-control" />
-	                      <sf:errors path="number" cssStyle="color:#ff0000;"></sf:errors>
 	                  </div>
 	                  <div class="from-group">
 	                    <label for="day">Day</label>
-	                      <sf:input path="day" id="day" class="form-control" />
-	                      <sf:errors path="day" cssStyle="color:#ff0000;" />
+	                      <sf:select path="day" id="day" class="custom-select" style="width:100%; height:40px;">
+	                      	<sf:options />
+	                      	<sf:option value="2">월요일</sf:option>
+	                      	<sf:option value="3">화요일</sf:option>
+	                      	<sf:option value="4">수요일</sf:option>
+	                      	<sf:option value="5">목요일</sf:option>
+	                      	<sf:option value="6">금요일</sf:option>
+	                      </sf:select>
 	                  </div>
 	                  <div class="from-group">
 	                  	<label for="time">Time</label>
@@ -55,7 +64,7 @@
 	                  </div>
 	                <br />
 					<input type="submit" value="submit" class="btn btn-primary">
-					<a href="<c:url value="/admin/buildings/schedules/${number}" />"
+					<a href="<c:url value="/admin/buildings/schedules/${num}" />"
 					class="btn btn-primary">Cancel</a>
 	              </sf:form>
             	</div>

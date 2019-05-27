@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<section class="sub-bnr sub-404" data-stellar-background-ratio="0.3">
+<section class="sub-bnr sub-schedule" data-stellar-background-ratio="0.3">
     <div class="overlay-gr">
       <div class="container">
         <h2>Building_Inventory</h2>
@@ -37,7 +37,7 @@
 						<td>${building.name}</td>
 						<td>${building.number}</td>
 						<td>
-							<a  href="<c:url value="/admin/buildings/schedules/${building.number}" />"> 
+							<a  href="<c:url value="/admin/buildings/schedules/${building.num}" />"> 
 							<i class="fa fa-align-justify" style="color:#00FF00;"></i></a>
 							<a  href="<c:url value="/admin/buildings/updateBuilding/${building.num}" />"> 
 							<i class="fa fa-edit" style="color:#00FF00;"></i></a>

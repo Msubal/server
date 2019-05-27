@@ -1,5 +1,7 @@
 package kr.ac.hansung.model;
 
+//import javax.validation.constraints.NotEmpty;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,7 +14,7 @@ public class Student {
 	private int num;
 	
 //	@NotEmpty(message = "Please write a id!")
-	private int studentId;
+	private int id;
 	
 //	@NotEmpty(message = "Please write a password!")
 	private int password;

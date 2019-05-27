@@ -33,7 +33,7 @@ public class StudentDao {
 				Student student = new Student();
 				
 				student.setNum(rs.getInt("num"));
-				student.setStudentId(rs.getInt("studentId"));
+				student.setId(rs.getInt("id"));
 				student.setPassword(rs.getInt("password"));
 				student.setName(rs.getString("name"));
 				student.setCheck(rs.getString("check"));
@@ -46,14 +46,14 @@ public class StudentDao {
 	public boolean addStudent(Student student) {
 		
 		String name = student.getName();
-		int studentId = student.getStudentId();
+		int id = student.getId();
 		int password = student.getPassword();
 		String check = student.getCheck();
 		
-		String sqlStatement = "insert into `student` (`studentId`,`password`,`name`,`check`) values(?, ?, ?, ?)";
+		String sqlStatement = "insert into `student` (`id`,`password`,`name`,`check`) values(?, ?, ?, ?)";
 		
 		return (jdbcTemplate.update(sqlStatement,
-				new Object[] { studentId, password,name, check}) == 1);
+				new Object[] { id, password,name, check}) == 1);
 	}
 	
 	public boolean deleteStudent(int num) {
@@ -67,14 +67,14 @@ public class StudentDao {
 		
 		int num = student.getNum();
 		String name = student.getName();
-		int studentId = student.getStudentId();
+		int id = student.getId();
 		int password = student.getPassword();
 		String check = student.getCheck();
 		
-		String sqlStatement = "update `student` set `studentId` = ?, `password` = ?, `check` = ?, `name` = ?"
+		String sqlStatement = "update `student` set `id` = ?, `password` = ?, `check` = ?, `name` = ?"
 								+" where `num` = ?";
 		
-		return (jdbcTemplate.update(sqlStatement,new Object[] { studentId, password, check, name, num}) == 1);
+		return (jdbcTemplate.update(sqlStatement,new Object[] { id, password, check, name, num}) == 1);
 	}
 	
 	public Student getStudentById(int num) {
@@ -89,7 +89,7 @@ public class StudentDao {
 				Student student = new Student();
 				
 				student.setNum(rs.getInt("num"));
-				student.setStudentId(rs.getInt("studentId"));
+				student.setId(rs.getInt("id"));
 				student.setPassword(rs.getInt("password"));
 				student.setName(rs.getString("name"));
 				student.setCheck(rs.getString("check"));
