@@ -6,10 +6,10 @@
     <div class="container">
       <div class="top-bar">
         <div class="open-time">
-          <p><i class="ion-ios-clock-outline"></i> Museum opening hours: 8AM to 7PM. Open all days</p>
+          <p><i class="ion-ios-clock-outline"></i> CapstoneDesign opening hours: 1PM to 5PM. Open only Friday</p>
         </div>
         <div class="call">
-          <p><i class="ion-headphone"></i> 1800 123  4659</p>
+          <p><i class="ion-headphone"></i> 010 8370 7314</p>
         </div>
       </div>
     </div>

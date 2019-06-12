@@ -37,6 +37,7 @@ public class StudentDao {
 				student.setPassword(rs.getInt("password"));
 				student.setName(rs.getString("name"));
 				student.setCheck(rs.getString("check"));
+				student.setOtp_check(rs.getString("otp_check"));
 				
 				return student;
 			}
@@ -49,11 +50,12 @@ public class StudentDao {
 		int id = student.getId();
 		int password = student.getPassword();
 		String check = student.getCheck();
+		String otp_check = student.getOtp_check();
 		
-		String sqlStatement = "insert into `student` (`id`,`password`,`name`,`check`) values(?, ?, ?, ?)";
+		String sqlStatement = "insert into `student` (`id`,`password`,`name`,`check`,'otp_check') values(?, ?, ?, ?, ?)";
 		
 		return (jdbcTemplate.update(sqlStatement,
-				new Object[] { id, password,name, check}) == 1);
+				new Object[] { id, password,name, check, otp_check}) == 1);
 	}
 	
 	public boolean deleteStudent(int num) {
@@ -70,11 +72,12 @@ public class StudentDao {
 		int id = student.getId();
 		int password = student.getPassword();
 		String check = student.getCheck();
+		String otp_check = student.getOtp_check();
 		
-		String sqlStatement = "update `student` set `id` = ?, `password` = ?, `check` = ?, `name` = ?"
+		String sqlStatement = "update `student` set `id` = ?, `password` = ?, `check` = ?,`otp_check` = ?, `name` = ?"
 								+" where `num` = ?";
 		
-		return (jdbcTemplate.update(sqlStatement,new Object[] { id, password, check, name, num}) == 1);
+		return (jdbcTemplate.update(sqlStatement,new Object[] { id, password, check,otp_check, name, num}) == 1);
 	}
 	
 	public Student getStudentById(int num) {
@@ -93,6 +96,7 @@ public class StudentDao {
 				student.setPassword(rs.getInt("password"));
 				student.setName(rs.getString("name"));
 				student.setCheck(rs.getString("check"));
+				student.setOtp_check(rs.getString("otp_check"));
 
 				return student;
 			}

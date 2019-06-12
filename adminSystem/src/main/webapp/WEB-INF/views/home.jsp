@@ -65,7 +65,60 @@
 					</form>
 				</div>
 			</li>
-				
+				Home.jsp파일에 추가된 부분
+
+
+         <!-- Slider 1.5 -->
+             <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-2.png"/>" data-bgposition="center center" alt="" /> 
+               
+               <!-- Layer -->
+               <div class="tp-caption sft font-montserrat tp-resizeme" 
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="-100" 
+                     data-speed="700" 
+                     data-start="1000" 
+                     data-easing="easeOutBack"
+                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                     data-splitin="none" 
+                     data-splitout="none" 
+                     data-elementdelay="0.1" 
+                     data-endelementdelay="0.1" 
+                     data-endspeed="300" 
+                     data-captionhidden="on"
+                     style="color: #fff; font-size: 60px; text-transform: uppercase; font-weight:bolder; letter-spacing:3px;"> OTP_Table </div>
+               
+               <!-- Layer -->
+               <div class="tp-caption sfb  font-montserrat text-center tp-resizeme" 
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="-20" 
+                     data-speed="700" 
+                     data-start="1500" 
+                     data-easing="easeOutBack"
+                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                     data-splitin="none" 
+                     data-splitout="none" 
+                     data-elementdelay="0.1" 
+                     data-endelementdelay="0.1" 
+                     data-endspeed="300" 
+                     data-captionhidden="on" 
+                     style="color: #fff; font-size: 18px; font-weight:100; text-transform: uppercase;"> You can View OTP <br>
+                 otp로그 저장페이지입니다. </div>
+               
+               <!-- Layer -->
+               <div class="tp-caption sfb tp-resizeme" 
+                     data-x="center" data-hoffset="0"
+                     data-y="center" data-voffset="80" 
+                     data-speed="700" 
+                     data-start="2000" 
+                     data-easing="easeOutBack"
+                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                     data-splitin="none" 
+                     data-splitout="none" 
+                     data-elementdelay="0.1" 
+                     data-endelementdelay="0.1" 
+                     data-endspeed="300" 
+                     data-captionhidden="on"> &nbsp; &nbsp; <a href="<c:url value="/admin/otps"/>" class="btn">확인 및 변경</a> &nbsp; &nbsp; </div>
+             </li>   
 				<!-- Slider 2 -->
 	          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-2.png"/>" data-bgposition="center center" alt="" /> 
 	            

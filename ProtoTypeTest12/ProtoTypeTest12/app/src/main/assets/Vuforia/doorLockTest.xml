@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="DoorLockImg" size="5.000000 4.929824" />
+    <ImageTarget name="B3400922670_l" size="5.000000 6.437500" />
+    <ImageTarget name="Mini2" size="5.000000 6.666667" />
+    <ImageTarget name="Mini" size="5.000000 6.666667" />
+    <ImageTarget name="Self" size="5.000000 6.666667" />
+    <ImageTarget name="KakaoTalk_20190311_135744842_06" size="5.000000 6.666667" />
+    <ImageTarget name="mypic_for_thetest" size="5.000000 6.651235" />
+  </Tracking>
+</QCARConfig>

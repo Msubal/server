@@ -23,5 +23,13 @@ public class ScheduleService {
 		
 		return scheduleDao.getschedules(number);
 	}
+	
+	public boolean addSchedule(Schedule schedule) {
+		return scheduleDao.addSchedule(schedule);
+	}
+	
+	public boolean deleteSchedule(int day,int time) {
+		return scheduleDao.deleteSchedule(day, time);
+	}
 
 }

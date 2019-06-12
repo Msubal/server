@@ -22,4 +22,6 @@ public class Student {
 	private String name;
 	
 	private String check;
+	
+	private String otp_check;
 }

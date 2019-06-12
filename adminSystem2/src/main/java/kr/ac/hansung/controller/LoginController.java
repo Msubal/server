@@ -27,8 +27,9 @@ public class LoginController {
 		Student student = null;
 
 		List<Student> students = studentService.getStudents();
-		for (int i = 0; i < students.size(); i++) {
-			if (students.get(i).getId() == login.getId()) {
+		for (int i = 0; i < students.size(); i++) 
+		{
+			if ((students.get(i).getId() == login.getId())&&(students.get(i).getPassword()==Integer.parseInt(login.getPassword()))) {
 				if (students.get(i).getCheck().equals("x")) {
 					student = students.get(i);
 					student.setCheck("o");

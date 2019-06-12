@@ -12,7 +12,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import kr.ac.hansung.model.Schedule;
-import kr.ac.hansung.model.Student;
 
 @Repository
 public class ScheduleDao {
